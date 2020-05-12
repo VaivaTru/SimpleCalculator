@@ -8,11 +8,11 @@ public class AppMenu {
 
     public void mainMenu() throws Exception {
         // TODO
-        while (exit != 'y') {
+        //while (exit != 'n') {
             System.out.println("Simple Java calculator ver. 1.0");
             arithmeticCalculateMenu();
             exitMenu();
-        }
+        //}
     }
 
     private void arithmeticCalculateMenu() throws Exception {
@@ -47,13 +47,13 @@ public class AppMenu {
         char close = read.charAt(0);
         switch (close) {
             case 'y':
-                exit = 'n';
+	System.out.println("Paleisk programa is naujo");  
+//              arithmeticCalculateMenu();
             case 'n':
-                exit = 'y';
                 System.out.println("Good luck!");
-            default:
-                System.out.println("Wrong symbol!");
-                exit = 'n';
+	break;
+//            default: throw new Exception("Operator not recognized");
+                
         }
     }
 }
